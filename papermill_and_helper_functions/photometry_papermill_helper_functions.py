@@ -85,6 +85,8 @@ def run_dataset (Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):
                 notebook_path = ""
             elif notebook_number == "5": 
                 notebook_path = "_seq"+seq_str[:seq_str.index('6')]
+            elif notebook_number == "6": 
+                notebook_path = "_seq"+seq_str[:seq_str.index('7')]
             else:
                 notebook_path = '_seq'+seq_str
 
@@ -94,7 +96,7 @@ def run_dataset (Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):
                 print(mouse+"_"+date_+'_Notebook_'+str(notebook_number)+'_'+notebook_version+notebook_path+': This session already exists - no need to re-run ;)')
             
             else:
-                #if we need to run the notebook we need to add 3 keys to the dict_for_pm. 
+                #if we need to run the notebook we need to add 4 keys to the dict_for_pm. 
                 
                 dict_for_pm["mouse"]=mouse 
                 #dict_for_pm["date_and_name"]=date_and_name
