@@ -61,16 +61,17 @@ def run_dataset (Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):
                         "6": "Nb_6x_combine_periods_of_interest",
                         "7": "Nb_7x_plots"}
     
-    #generate 3 lists.
+    #generate 4 lists.
     l_mouse = list(Mouse_Date_FileName["Mouse"]) 
     l_date_ = list(Mouse_Date_FileName.apply(lambda x: generate_date_(x["Date"]),axis=1))  
     l_date_and_name = list(Mouse_Date_FileName.apply(lambda x: generate_name_and_date(x["Date"],x["Mouse"]),axis=1))
- 
+    l_photometry_data_file_name = list (Mouse_Date_FileName["File name"])
+    
     
     data_dir_output = dict_for_pm["data_dir_output"]
     HowManyBack = dict_for_pm["HowManyBack"]
     #these are the 3 variables that change each session (what we will call the outer loop)
-    for (mouse, date_, date_and_name) in zip(l_mouse, l_date_, l_date_and_name):
+    for (mouse, date_, date_and_name,photometry_data_file_name) in zip(l_mouse, l_date_, l_date_and_name,l_photometry_data_file_name):
         
         for notebook in nb_list: 
             
@@ -100,7 +101,8 @@ def run_dataset (Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):
                 #dict_for_pm["date_"]=date_
                 dict_for_pm["data_day"]=date_and_name
                 dict_for_pm["date"]=date_
-                
+                dict_for_pm["photo_day"] = photometry_data_file_name
+                print (date_and_name+"_"+photometry_data_file_name)
                 print('Notebook_'+notebook_number+'_'+notebook_version+'.ipynb is being executed')
                 pm.execute_notebook(nb_path+folder_name+"/"+'Notebook_'+str(notebook_number)+'_'+notebook_version+'.ipynb', 'TestOutPut.ipynb',kernel_name = "python3", parameters= dict_for_pm,nest_asyncio=True)
     return 
