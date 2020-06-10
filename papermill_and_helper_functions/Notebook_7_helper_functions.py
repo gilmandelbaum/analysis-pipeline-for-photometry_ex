@@ -17,20 +17,44 @@ get a specific cell type
 """
 
 def extract_rl_tt_period_celltype_mean(PhotoData_perTrial_channels,rl,tt,period,cell_type):
+    
+    number_of_trials = len(PhotoData_perTrial_channels[rl][0][tt][period][cell_type].columns)
+    
     mean_ipsi_next = PhotoData_perTrial_channels[rl][0][tt][period][cell_type].mean(axis=1)
     mean_contra_next = PhotoData_perTrial_channels[rl][1][tt][period][cell_type].mean(axis=1)
-    number_of_trials = len(PhotoData_perTrial_channels[rl][0][tt][period][cell_type].columns)
-    return (mean_ipsi_next,mean_contra_next,number_of_trials)
+    
+    sem_ipsi_next = (PhotoData_perTrial_channels[rl][0][tt][period][cell_type].std(axis=1))/(number_of_trials**0.5)
+    sem_contra_next = PhotoData_perTrial_channels[rl][1][tt][period][cell_type].std(axis=1)/(number_of_trials**0.5)
+    
+    
+    return (mean_ipsi_next,sem_ipsi_next,mean_contra_next,sem_contra_next,number_of_trials)
+
+
 """
 for 7b.
 """
 
+def calculate_sem (data):
+    sem_up_ipsi_next = data[0]+data[1]/2
+    sem_down_ipsi_next = data[0]-data[1]/2
+    
+    sem_up_contra_next = data[2]+data[3]/2
+    sem_down_contra_next = data[2]-data[3]/2
+    
+    return (sem_up_ipsi_next,sem_down_ipsi_next,sem_up_contra_next,sem_down_contra_next)
 
-def plot_ipsi_contra_together (data,trial_type,cell_type,y_axis,path_to_plot):
 
-    plt.plot(data[0], label="ipsi_next"+" "+"("+str(data[2])+")")
-    plt.plot(data[1], label="contra_next"+" "+"("+str(data[2])+")")
 
+def plot_ipsi_contra_together (data,sem,trial_type,cell_type,y_axis,path_to_plot):
+
+    plt.plot(data[0],linewidth=2, label="ipsi_next"+" "+"("+str(data[4])+")")
+    plt.plot(data[2],linewidth=2, label="contra_next"+" "+"("+str(data[4])+")")
+    
+    plt.plot(sem[0],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(sem[1],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(sem[2],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(sem[3],color='black', linewidth=0.5,alpha=0.8)
+    
     # Add legend
     plt.legend(loc='lower left')
     
