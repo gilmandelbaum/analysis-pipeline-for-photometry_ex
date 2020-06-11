@@ -16,15 +16,20 @@ get it from a specific period of interest
 get a specific cell type 
 """
 
-def extract_rl_tt_period_celltype_mean(PhotoData_perTrial_channels,rl,tt,period,cell_type):
+def extract_data_of_interest_ipsi_contra (PhotoData_perTrial_channels,rl,tt,period,cell_type):
+    ipsi_next = PhotoData_perTrial_channels[rl][0][tt][period][cell_type]
+    contra_next = PhotoData_perTrial_channels[rl][1][tt][period][cell_type]
+    return (ipsi_next,contra_next)
     
-    number_of_trials = len(PhotoData_perTrial_channels[rl][0][tt][period][cell_type].columns)
+def calculate_mean_sem(data_ipsi_contra):
     
-    mean_ipsi_next = PhotoData_perTrial_channels[rl][0][tt][period][cell_type].mean(axis=1)
-    mean_contra_next = PhotoData_perTrial_channels[rl][1][tt][period][cell_type].mean(axis=1)
+    number_of_trials = len(data_ipsi_contra[0].columns)
     
-    sem_ipsi_next = (PhotoData_perTrial_channels[rl][0][tt][period][cell_type].std(axis=1))/(number_of_trials**0.5)
-    sem_contra_next = PhotoData_perTrial_channels[rl][1][tt][period][cell_type].std(axis=1)/(number_of_trials**0.5)
+    mean_ipsi_next = data_ipsi_contra[0].mean(axis=1)
+    mean_contra_next = data_ipsi_contra[1].mean(axis=1)
+    
+    sem_ipsi_next = data_ipsi_contra[0].std(axis=1)/(number_of_trials**0.5)
+    sem_contra_next = data_ipsi_contra[1].std(axis=1)/(number_of_trials**0.5)
     
     
     return (mean_ipsi_next,sem_ipsi_next,mean_contra_next,sem_contra_next,number_of_trials)
@@ -34,26 +39,27 @@ def extract_rl_tt_period_celltype_mean(PhotoData_perTrial_channels,rl,tt,period,
 for 7b.
 """
 
-def calculate_sem (data):
-    sem_up_ipsi_next = data[0]+data[1]/2
-    sem_down_ipsi_next = data[0]-data[1]/2
+def make_sem_traces (data_ipsi_contra_mean_sem):
+    sem_up_ipsi_next = data_ipsi_contra_mean_sem[0]+data_ipsi_contra_mean_sem[1]/2
+    sem_down_ipsi_next = data_ipsi_contra_mean_sem[0]-data_ipsi_contra_mean_sem[1]/2
     
-    sem_up_contra_next = data[2]+data[3]/2
-    sem_down_contra_next = data[2]-data[3]/2
+    sem_up_contra_next = data_ipsi_contra_mean_sem[2]+data_ipsi_contra_mean_sem[3]/2
+    sem_down_contra_next = data_ipsi_contra_mean_sem[2]-data_ipsi_contra_mean_sem[3]/2
     
     return (sem_up_ipsi_next,sem_down_ipsi_next,sem_up_contra_next,sem_down_contra_next)
 
 
 
-def plot_ipsi_contra_together (data,sem,trial_type,cell_type,y_axis,path_to_plot):
+def plot_ipsi_contra_together (data_ipsi_contra_mean_sem,sem_traces,
+                               trial_type,cell_type,y_axis,path_to_plot):
 
-    plt.plot(data[0],linewidth=2, label="ipsi_next"+" "+"("+str(data[4])+")")
-    plt.plot(data[2],linewidth=2, label="contra_next"+" "+"("+str(data[4])+")")
+    plt.plot(data_ipsi_contra_mean_sem[0],linewidth=2, label="ipsi_next"+" "+"("+str(data_ipsi_contra_mean_sem[4])+")")
+    plt.plot(data_ipsi_contra_mean_sem[2],linewidth=2, label="contra_next"+" "+"("+str(data_ipsi_contra_mean_sem[4])+")")
     
-    plt.plot(sem[0],color='black', linewidth=0.5,alpha=0.8)
-    plt.plot(sem[1],color='black', linewidth=0.5,alpha=0.8)
-    plt.plot(sem[2],color='black', linewidth=0.5,alpha=0.8)
-    plt.plot(sem[3],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(sem_traces[0],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(sem_traces[1],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(sem_traces[2],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(sem_traces[3],color='black', linewidth=0.5,alpha=0.8)
     
     # Add legend
     plt.legend(loc='lower left')
@@ -71,3 +77,11 @@ def plot_ipsi_contra_together (data,sem,trial_type,cell_type,y_axis,path_to_plot
     plt.show()
     
      
+    
+    
+    
+    
+    
+    
+    
+    
