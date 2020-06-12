@@ -18,4 +18,4 @@ This saves lots of time and allows to efficiently explore the data.
 
 
 The design of this behavioral task for mice was inspired by operant conditioning behavioral tasks. 
-For more details see [task description] (https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/blob/master/task_description.md)
+For more details see [task description](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/blob/master/task_description.md)
