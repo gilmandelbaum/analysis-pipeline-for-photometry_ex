@@ -16,7 +16,7 @@ get it from a specific period of interest
 get a specific cell type 
 """
 
-def extract_data_of_interest_ipsi_contra (PhotoData_perTrial_channels,rl,tt,period,cell_type):
+def extract_data_of_interest_ipsi_contra_per_session (PhotoData_perTrial_channels,rl,tt,period,cell_type):
     ipsi_next = PhotoData_perTrial_channels[rl][0][tt][period][cell_type]
     contra_next = PhotoData_perTrial_channels[rl][1][tt][period][cell_type]
     return (ipsi_next,contra_next)
