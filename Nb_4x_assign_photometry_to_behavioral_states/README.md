@@ -1,4 +1,5 @@
-Notebook 4:
+# Notebook 4:
+
 Flagging periods of interest in order to generate neural epochs of interest. input: Notebook 2
 output: .pickle that has a data frame with two columns. The first column is the bin number and the second column is the trial number.
 
