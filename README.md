@@ -41,7 +41,7 @@ Nb stands for notebooks. The number refers to when the notebook will be exected 
 [Nb_6x_combine_periods_of_interest](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_6x_combine_periods_of_interest)
 
 
-[Nb_7x_plots] https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_7x_plots
+[Nb_7x_plots](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_7x_plots)
 
 [data analysis notebook(s)](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set) run and combine data from all the sessions. 
 
