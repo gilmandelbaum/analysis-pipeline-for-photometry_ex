@@ -46,3 +46,11 @@ Nb stands for notebooks. The number refers to when the notebook will be exected 
 [data analysis notebook(s)](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set) run and combine data from all the sessions. 
 
 all the notebooks run together using a [photometry_papermill.ipynb notebook](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/papermill_and_helper_functions) or can be run stand alone. 
+
+
+
+## Acknowledgments
+
+This analysis package was written by Gil Mandelbaum and Maria Diaz Bobillo with the help of [Jeff Markowitz](https://github.com/jmarkow) in the lab of [Bernardo Sabatini](https://sabatini.hms.harvard.edu/) at Harvard Medical School. 
+
+
