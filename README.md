@@ -32,7 +32,7 @@ Nb stands for notebooks. The number refers to when the notebook will be exected 
 
 [Nb_2x_combine_photometry_behav_data](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_2x_combine_photometry_behav_data)
 
-[Nb_3x_photometry_signal_analysis] (https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_3x_photometry_signal_analysis)
+[Nb_3x_photometry_signal_analysis](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_3x_photometry_signal_analysis)
 
 [Nb_4x_assign_photometry_to_behavioral_states](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_4x_assign_photometry_to_behavioral_states)
 
