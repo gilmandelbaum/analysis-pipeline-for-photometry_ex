@@ -1,13 +1,6 @@
-Notebook 4:
-Flagging periods of interest in order to generate neural epochs of interest. input: Notebook 2
-output: .pickle that has a data frame with two columns. The first column is the bin number and the second column is the trial number.
+# Notebook 5:
+input: notebook 1 (list of trial types of interest), notebook 3 (processed neural data). It also uses the flags that were generated in notebook 4s
+Notebook 5 also needs [Tags], [Timing], [Start_or_end] which are all set in the papermill notebook. 
+output: list that is [R/L][IPSI/CONTRA][trial type][period]. Also a list_of_tags in a csv file. 
 
-4_a: Reward_NoReward_tag: consumption or no rewarded period.
-
-4_b: ENL_tag: enforced non lick period task.
-
-4_c: Cue_to_Sel_tag: the period of the cue and the response time.
-
-4_d: Cue_to_Sel_fromPrevTrial_tag: cue to the selection from the previous trial.
-
-4_e: tags the first ENL period penalty time and only if it happened after 500ms into the ENL period.
+5_a: splits as described above. 
