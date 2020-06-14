@@ -109,3 +109,7 @@ output: same structure as notebook 5 but with an added period combining periods.
 
 7_b: plots the mean of the ipsi and contra trials in win stay lose switch conditions from the right hemisphere. 
 
+
+# daata set notebooks: 
+
+data_set_generate_data_object: generates an object with the strcuture [Right or left side of the brain][ 
