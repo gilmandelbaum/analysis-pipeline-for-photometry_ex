@@ -1,6 +1,6 @@
 # Photometry_analysis pipeline 
 
-This package is the second (the first one is for [optogenetics](https://github.com/gilmandelbaum/analysis-pipeline-for-optogenetics_ex)) to support the analysis of a 
+This package is the second (the first one is for [optogenetic experiments](https://github.com/gilmandelbaum/analysis-pipeline-for-optogenetics_ex)) to support the analysis of a 
 project in the Sabatini Lab at Harvard Medical School in which we try to 
 better understand how the brain allows us to decide what to do next.
 
