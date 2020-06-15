@@ -4,11 +4,13 @@
 
 ### data set generate
 
-data_set_generate_data_object: 
+**data_set_generate_data_object: 
+
 generates one object that has the structure:
 [Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}.
 
-data_set_generate_data_object-with bootstrap on sessions:
+**data_set_generate_data_object-with bootstrap on sessions:
+
 generates one object that has the structure:
 [Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}. Each mouse is resampled with return and 10 sesssions are taken. 
 
