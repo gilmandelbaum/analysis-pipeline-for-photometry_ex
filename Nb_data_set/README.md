@@ -2,7 +2,9 @@
 # data set notebooks: 
 
 data_set_generate_data_object: 
-generates one object that has the strcuture [Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}.
+generates one object that has the structure:
+
+[Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}.
 
 ## lineplot
 
