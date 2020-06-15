@@ -95,26 +95,30 @@ def calculate_mean_data_set (ipsi_contra_data_set):
     return (df_ipsi_next,df_contra_next)
 
 
+
 """
 used in data_set_plots_ic_and_sessions_combined
 similar to 7b
 """
 
+
 def calculate_mean_sem(data_ipsi_contra):
     
-    number_of_trials = len(data_ipsi_contra[0].columns)
+    number_of_trials_ipsi_next = len(data_ipsi_contra[0].columns)
+    number_of_trials_contra_next = len(data_ipsi_contra[1].columns)
     
     mean_ipsi_next = data_ipsi_contra[0].mean(axis=1)
     mean_contra_next = data_ipsi_contra[1].mean(axis=1)
     
-    sem_ipsi_next = data_ipsi_contra[0].std(axis=1)/(number_of_trials**0.5)
-    sem_contra_next = data_ipsi_contra[1].std(axis=1)/(number_of_trials**0.5)
+    sem_ipsi_next = data_ipsi_contra[0].std(axis=1)/(number_of_trials_ipsi_next**0.5)
+    sem_contra_next = data_ipsi_contra[1].std(axis=1)/(number_of_trials_contra_next**0.5)
     
     
-    return (mean_ipsi_next,sem_ipsi_next,mean_contra_next,sem_contra_next,number_of_trials)
+    return (mean_ipsi_next,sem_ipsi_next,mean_contra_next,sem_contra_next,number_of_trials_ipsi_next,number_of_trials_contra_next)
+    #in the return - its called trials but its actually sessions. I am just using the same code as notebook 7s so kept it the same.
 
 
-
+#make_sem_traces is a function that helps making the sem traces for the plots. 
 def make_sem_traces (data_ipsi_contra_mean_sem):
     sem_up_ipsi_next = data_ipsi_contra_mean_sem[0]+data_ipsi_contra_mean_sem[1]/2
     sem_down_ipsi_next = data_ipsi_contra_mean_sem[0]-data_ipsi_contra_mean_sem[1]/2
@@ -126,9 +130,17 @@ def make_sem_traces (data_ipsi_contra_mean_sem):
 
 
 
+
+
+
+#data_ipsi_contra_mean_sem is the output of calculate_mean_sem
+#sem_traces is the output of make_sem_traces.
+
+
 def plot_ipsi_contra_together (data_ipsi_contra_mean_sem,sem_traces,
                                trial_type,period_of_interest,cell_type,y_axis,path_to_plot):
-
+    #number of sessions is the same ipsi and contra. 
+    
     plt.plot(data_ipsi_contra_mean_sem[0],linewidth=2, label="ipsi_next"+" "+"("+str(data_ipsi_contra_mean_sem[4])+")")
     plt.plot(data_ipsi_contra_mean_sem[2],linewidth=2, label="contra_next"+" "+"("+str(data_ipsi_contra_mean_sem[4])+")")
     
