@@ -93,25 +93,3 @@ def divide_withWithout_ENLp_noCuep(df_trial, ENLp):
 
 
 
-
-"""
-for notebook 1_d:
-"""
-
-def get_nTrials_tt_boot_strap(data):
-    total= []
-    for rl in data:
-        rl_l=[]
-        for ic in rl:
-            ic_l=[]
-            for i,trial_df in enumerate (ic):  
-                #print (i)
-                if i ==0: #lose_switch
-                    trial_df = trial_df.sample(n = 30, replace = True)     
-                elif i ==3: #win stay
-                    trial_df = trial_df.sample(n = 100, replace = True) 
-                ic_l.append(trial_df.index)
-            rl_l.append(ic_l)
-        total.append(rl_l)
-    return total
-
