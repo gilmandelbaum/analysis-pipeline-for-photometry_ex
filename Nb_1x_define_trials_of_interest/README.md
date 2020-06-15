@@ -9,5 +9,3 @@ output: a list of lists called mouse_dateNotebook_1_label.pickle
 1_b: get no ENLp, no CUEp trials. 
 
 1_c: get ENLp. 
-
-1_d: Make number of trials equal in the win repeat and lose switch condition. (Sample with return and make each win repeat condition have 80 trials and each lose switch have 30 trials). 
