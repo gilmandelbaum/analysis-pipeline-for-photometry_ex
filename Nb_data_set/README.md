@@ -1,11 +1,15 @@
 
 # data set notebooks: 
 
-data_set_generate_data_object: 
-generates one object that has the structure:
-
+data_set_generate_data_object: generates one object that has the structure:
 [Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}.
 
+data_set_generate_data_object-with bootstrap on sessions.ipynb: generates one object that has the structure:
+[Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}. Each mouse is resampled with return and 10 sesssions are taken. 
+
+
+
+data_set_generate_data_object-with bootstrap on sessions.ipynb
 ### lineplot (each session avg contributes one trace. The avg of all those traces are plotted)
 
 papermill_data_set_lineplot_(ic_together): 
