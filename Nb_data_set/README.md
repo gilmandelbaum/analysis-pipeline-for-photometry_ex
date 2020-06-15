@@ -6,7 +6,7 @@ generates one object that has the structure:
 
 [Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}.
 
-## lineplot
+### lineplot (each session avg contributes one trace. The avg of all those traces are plotted)
 
 
 papermill_data_set_lineplot_(ic_together): 
