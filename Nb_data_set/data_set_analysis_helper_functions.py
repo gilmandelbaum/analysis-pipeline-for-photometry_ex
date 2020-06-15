@@ -79,7 +79,7 @@ def extract_data_of_interest_ipsi_contra_data_set (PhotoData_perTrial_channels_d
     return (ipsi_contra_data_set)
     
     
-def calculate_mean_data_set (ipsi_contra_data_set):
+def calculate_mean_data_set (ipsi_contra_data_set): #
     
     df_ipsi_next = pd.DataFrame()
     df_contra_next = pd.DataFrame()
