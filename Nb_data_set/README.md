@@ -8,7 +8,6 @@ generates one object that has the structure:
 
 ### lineplot (each session avg contributes one trace. The avg of all those traces are plotted)
 
-
 papermill_data_set_lineplot_(ic_together): 
 to run the data_set_lineplot_(ic_together) notebook. The papermill is to make changes to the period that is being plotted.
 
