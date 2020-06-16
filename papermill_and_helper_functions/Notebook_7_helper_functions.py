@@ -102,7 +102,7 @@ def extract_data_of_interest_ipsi_contra_per_session_bootstrap (PhotoData_perTri
     
     contra_next = PhotoData_perTrial_channels[rl][1][tt][period][cell_type]
     if tt ==0: 
-        contra_next_bootstrap = contra_next.sample(n=25,replace=True,axis=1)
+        contra_next_bootstrap = contra_next.sample(n=20,replace=True,axis=1)
     elif tt ==3: 
         contra_next_bootstrap = contra_next.sample(n=90,replace=True,axis=1)
     else:
