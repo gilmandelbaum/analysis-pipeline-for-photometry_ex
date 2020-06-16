@@ -84,6 +84,31 @@ def plot_ipsi_contra_together (data_ipsi_contra_mean_sem,sem_traces,
     
      
     
+     """
+for 7_c
+"""
+
+def extract_data_of_interest_ipsi_contra_per_session_bootstrap (PhotoData_perTrial_channels,rl,tt,period,cell_type):
+    
+    ipsi_next = PhotoData_perTrial_channels[rl][0][tt][period][cell_type]
+    if tt ==0: 
+        ipsi_next_bootstrap = ipsi_next.sample(n=25,replace=True,axis=1)
+    elif tt ==3: 
+        ipsi_next_bootstrap = ipsi_next.sample(n=90,replace=True,axis=1)
+    else:
+        ipsi_next_bootstrap = ipsi_next
+    
+    
+    
+    contra_next = PhotoData_perTrial_channels[rl][1][tt][period][cell_type]
+    if tt ==0: 
+        contra_next_bootstrap = contra_next.sample(n=25,replace=True,axis=1)
+    elif tt ==3: 
+        contra_next_bootstrap = contra_next.sample(n=90,replace=True,axis=1)
+    else:
+        contra_next_bootstrap = contra_next
+
+    return (ipsi_next_bootstrap,contra_next_bootstrap)
     
     
     
