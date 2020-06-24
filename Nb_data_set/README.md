@@ -8,11 +8,9 @@ name of analysis-->seq to be analyzed-->type of analysis-->period analyzed
 
 # [0.data set generate](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/0.data_set_generate)
 
-## generate the data set of interest in a .pickle
-
 **data_set_generate_data_object:**
 
-generates one object that has the structure:
+generates one object in a .pickle fomat that that has the structure:
 [Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}.
 
 
