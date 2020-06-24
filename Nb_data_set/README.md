@@ -1,5 +1,5 @@
 
-# data set analysis: 
+                                                                          # data set analysis
 The structure of the data analysis folders is: 
 
 name of analysis-->seq to be analyzed-->type of analysis-->period analyzed
