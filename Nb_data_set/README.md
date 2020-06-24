@@ -4,17 +4,19 @@ The structure of the data analysis folders is:
 
 name of analysis-->seq to be analyzed-->type of analysis-->period analyzed
 
-## 0.data set generate
+# 0.data set generate
+
+## generate the data set of interest in a .pickle
 
 **data_set_generate_data_object:**
-### generate the data set of interest in a .pickle. 
 
 generates one object that has the structure:
 [Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}.
 
 
-## data_set_lineplot
-### plot the data in a line plot from various periods of interest. One can combine sessions in different ways too. (See explanation below).
+# data_set_lineplot
+
+## plot the data in a line plot from various periods of interest. One can combine sessions in different ways too. (See explanation below).
 
 **papermill_data_set_lineplot_(ic_together):**
 to run the data_set_lineplot_(ic_together) notebook. The papermill is to make changes to the period that is being plotted.
