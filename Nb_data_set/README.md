@@ -17,6 +17,8 @@ generates one object that has the structure:
 **papermill_data_set_lineplot_(ic_together):**
 to run the data_set_lineplot_(ic_together) notebook. The papermill is to make changes to the period that is being plotted.
 
+### right_side_of_the_brain
+
 **data_set_lineplot_(ic_together):**
 plots similar to 
 [7b](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/blob/master/Nb_7x_plots/Notebook_7_b.ipynb) 
