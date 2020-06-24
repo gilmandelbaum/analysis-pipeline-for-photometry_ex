@@ -30,7 +30,7 @@ but for a data set: it takes the avg from each session and makes a line plot of 
 ### [left_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain)
 all notebooks below are for the left hemisphere. 
 
-**data_set_lineplot_ic_together_right_side.ipynb:**
+**data_set_lineplot_ic_together_left_side.ipynb:**
 plots similar to 
 [7c](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/blob/master/Nb_7x_plots/Notebook_7_c.ipynb) 
 but for a data set: it takes the avg from each session and makes a line plot of the avg of all the sessions from the left hemisphere. 
