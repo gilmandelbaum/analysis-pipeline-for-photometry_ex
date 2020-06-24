@@ -19,10 +19,14 @@ to run the data_set_lineplot_(ic_together) notebook. The papermill is to make ch
 
 ### right_side_of_the_brain
 
-**data_set_lineplot_(ic_together):**
+all notebooks below are for the right hemisphere. 
+
+**data_set_lineplot_ic_together_right_side:**
 plots similar to 
 [7b](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/blob/master/Nb_7x_plots/Notebook_7_b.ipynb) 
-but for a data set, i.e., Takes the avg from each session and makes a line plot of the avg of all the sessions. 
+but for a data set: it takes the avg from each session and makes a line plot of the avg of all the sessions. 
+
+### left_side_of_the_brain
 
 
 ## data_set_calculate
