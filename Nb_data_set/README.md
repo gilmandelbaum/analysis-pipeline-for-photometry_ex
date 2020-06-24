@@ -19,8 +19,7 @@ plot the data in a line plot from various periods of interest. One can combine s
 **papermill_data_set_lineplot_(ic_together).ipynb:**
 to run the data_set_lineplot_(ic_together) notebook. The papermill is to make changes to the period that is being plotted.
 
-### [right_side_of_the_brain:]()
-all notebooks below are for the right hemisphere. 
+### [right_side_of_the_brain:]() all notebooks below are for the right hemisphere. 
 
 **data_set_lineplot_ic_together_right_side.ipynb:**
 plots similar to 
