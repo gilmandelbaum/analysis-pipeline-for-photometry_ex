@@ -7,6 +7,8 @@ name of analysis-->seq to be analyzed-->type of analysis-->period analyzed
 ## 0.data set generate
 
 **data_set_generate_data_object:**
+### generate the data set of interest in a .pickle. 
+
 generates one object that has the structure:
 [Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}.
 
