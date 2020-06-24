@@ -46,4 +46,4 @@ all notebooks below are for the right hemisphere.
 
 
 ### [left_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain) 
-all notebooks below are for the right hemisphere. 
+all notebooks below are for the left hemisphere. 
