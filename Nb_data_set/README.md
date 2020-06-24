@@ -39,5 +39,5 @@ plots similar to
 but for a data set: it takes the avg from each session and makes a line plot of the avg of all the sessions from the left hemisphere. 
 
 
-## data_set_calculate
+### [data_set_calculate](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations)
 
