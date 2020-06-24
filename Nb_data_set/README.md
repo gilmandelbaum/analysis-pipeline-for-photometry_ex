@@ -10,10 +10,6 @@ name of analysis-->seq to be analyzed-->type of analysis-->period analyzed
 generates one object that has the structure:
 [Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}.
 
-**data_set_generate_data_object-with bootstrap on sessions:**
-generates one object that has the structure:
-[Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}. Each mouse is resampled with return and 10 sesssions are taken. 
-
 
 ## data_set_lineplot
 ### each session avg contributes one trace. The avg of all those traces are plotted. 
