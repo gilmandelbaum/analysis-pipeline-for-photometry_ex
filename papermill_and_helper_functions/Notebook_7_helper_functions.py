@@ -84,7 +84,7 @@ def plot_ipsi_contra_together (data_ipsi_contra_mean_sem,sem_traces,
     
      
     
-     """
+"""
 for 7_c
 """
 
