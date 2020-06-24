@@ -38,3 +38,12 @@ but for a data set: it takes the avg from each session and makes a line plot of 
 
 # [data_set_calculate:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations)
 extracting features (numbers!) from the traces 
+
+### [right_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/right_side_of_the_brain) 
+all notebooks below are for the right hemisphere. 
+
+
+
+
+### [left_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain) 
+all notebooks below are for the right hemisphere. 
