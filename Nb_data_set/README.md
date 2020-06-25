@@ -42,8 +42,13 @@ extracting features (numbers!) from the traces
 ### [right_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/right_side_of_the_brain) 
 all notebooks below are for the right hemisphere. 
 
+**data_set_calculations_combined_periods_1_right_side.ipynb:***
+calculates the max peak of the photometry signal after choice lick per session per condition. Find the max peak and takes the avg on 100ms around that.
 
 
 
 ### [left_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain) 
+
+**data_set_calculations_combined_periods_1_left_side.ipynb:***
+calculates the max peak of the photometry signal after choice lick per session per condition. Find the max peak and takes the avg on 100ms around that.
 all notebooks below are for the left hemisphere. 
