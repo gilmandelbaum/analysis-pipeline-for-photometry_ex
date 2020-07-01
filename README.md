@@ -1,6 +1,7 @@
 # Photometry_analysis pipeline 
 
-This package is the second (the first one is for [optogenetic experiments](https://github.com/gilmandelbaum/analysis-pipeline-for-optogenetics_ex)) to support the analysis of a project in the [Sabatini Lab](https://sabatini.hms.harvard.edu/) at Harvard Medical School in which we try to better understand how the brain allows us to decide what to do next.
+This package is the second (the first one is for [optogenetic experiments](https://github.com/gilmandelbaum/analysis-pipeline-for-optogenetics_ex)) to support the analysis of a project in the [Sabatini Lab](https://sabatini.hms.harvard.edu/) at Harvard Medical School in which we try to better understand how the brain allows us to decide what to do next. 
+This package is written to analyze photometry experiments. 
 
 It uses jupyter noteboooks and each stage of the pipeline can be run stand-alone 
 or as part of work flow controlled by one "master jupyter notebook" that uses 
