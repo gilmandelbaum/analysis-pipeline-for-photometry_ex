@@ -41,7 +41,7 @@ def tag_period_from_previousTrial(beh_photo_align, period_name, states_list):
     return Period_df
 
 
-#function that adds a flag for notebook 4_c: 
+#function that adds a flag for notebook 4_e: 
     
 def tag_ENLp(beh_photo_align,state_ENLp):
     rows_list = []
@@ -51,15 +51,47 @@ def tag_ENLp(beh_photo_align,state_ENLp):
         
         rows_list.append(beh_photo_align.loc[(beh_photo_align['iState_start'] == state_start) & (beh_photo_align['iState_end'] == state_end)])
     
+    #take only first two state transitions. In the standard case that would be 29 to 32 and 29 to 30. 
     firstCon = rows_list[0]
     SecondCon = rows_list[1]
+    #make a data frame with the data: 
     frames = [firstCon,SecondCon]
     dfEnlPeBins = pd.concat(frames)
+    
+    #sort data frame: 
     dfEnlPeBins = dfEnlPeBins.sort_index()
+    #take the diff on the Real_nTrials column 
     diffReal_nTrials = dfEnlPeBins["Real_nTrials"].diff()
+    
+    #make a new column: 
     dfEnlPeBins["diffENLp"] = diffReal_nTrials
+    #take only the first ENLP:
     dfEnlPeBins = dfEnlPeBins.loc[dfEnlPeBins["diffENLp"] !=0]
+    #tak only ENLP that occured 250ms from the start of the trial 
     dfEnlPeBins = dfEnlPeBins.loc[dfEnlPeBins["iOccurrence"] >50]
+    
+    #make a dataframe from what is left: 
     dfEnlPeBins = pd.DataFrame(dfEnlPeBins["Real_nTrials"])
+    
+    #change column header name: 
     dfEnlPeBins = dfEnlPeBins.rename(columns={"Real_nTrials": "firstENLp"})
+    
     return(dfEnlPeBins)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
