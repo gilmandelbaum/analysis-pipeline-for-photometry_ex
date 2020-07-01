@@ -1,4 +1,4 @@
-# Photometry_analysis pipeline 
+# Photometry analysis pipeline 
 
 This package is the second (the first one is for [optogenetic experiments](https://github.com/gilmandelbaum/analysis-pipeline-for-optogenetics_ex)) to support the analysis of a project in the [Sabatini Lab](https://sabatini.hms.harvard.edu/) at Harvard Medical School in which we try to better understand how the brain allows us to decide what to do next. 
 
@@ -51,7 +51,7 @@ all the notebooks run together using a [photometry_papermill.ipynb notebook](htt
 After all the session are analyzed there is a second step that generates a unique structure that hold the full [data set](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/0.data_set_generate) of either licks, data of interest per trial, or photometry data from over 20 periods of the trial. 
 
 
-## 3. analyze the sessions/data set 
+### 3. analyze the sessions/data set 
 The third step is to analyze the [data](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set) 
 Currently, you can [plot](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot) over 20 periods of interest as a line plot and compare trial types/direction of choice and do so for right hemisphere recordings and left hemisphere recordings as well. 
 You can also [calculate](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/2.data_set_calculations) and compare various parameters from the photometry signal.
