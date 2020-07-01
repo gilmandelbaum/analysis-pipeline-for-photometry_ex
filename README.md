@@ -48,7 +48,7 @@ Nb stands for notebooks. The number refers to when the notebook will be exected 
 all the notebooks run together using a [photometry_papermill.ipynb notebook](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/papermill_and_helper_functions) or can be run stand alone. 
 
 ### 2. generate the data set 
-After all the session are analyzed there is a second step that generates a unique structure that hold the full [data set](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/0.data_set_generate) of either licks, data of interest per trial, or photometry data from over 20 periods of the trial. 
+After all the session are analyzed there is a second step that generates a unique structure that hold the full [data set](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/0.data_set_generate) of either licks, data of interest per trial, or photometry data. 
 
 
 ### 3. analyze the sessions/data set 
