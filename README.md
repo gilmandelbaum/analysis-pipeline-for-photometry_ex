@@ -23,7 +23,7 @@ For more details see [task description](https://github.com/gilmandelbaum/analysi
 
 ## For each session the stages of analysis are:
 
-### processing the sessions 
+### 1. processing the sessions 
 It uses jupyter noteboooks and each stage of the pipeline can be run stand-alone or as part of work flow controlled by one "master jupyter notebook" that uses 
 the [papermill](https://papermill.readthedocs.io/en/latest/) library to control all the notebooks in the pipeline. 
 
@@ -47,11 +47,11 @@ Nb stands for notebooks. The number refers to when the notebook will be exected 
 
 all the notebooks run together using a [photometry_papermill.ipynb notebook](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/papermill_and_helper_functions) or can be run stand alone. 
 
-## generate the data set 
+### 2. generate the data set 
 After all the session are analyzed there is a second step that generates a unique structure that hold the full [data set](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/0.data_set_generate) of either licks, data of interest per trial, or photometry data from over 20 periods of the trial. 
 
 
-## analyze the sessions/data set 
+## 3. analyze the sessions/data set 
 The third step is to analyze the [data](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set) 
 Currently, you can [plot](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot) over 20 periods of interest as a line plot and compare trial types/direction of choice and do so for right hemisphere recordings and left hemisphere recordings as well. 
 You can also [calculate](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/2.data_set_calculations) and compare various parameters from the photometry signal.
