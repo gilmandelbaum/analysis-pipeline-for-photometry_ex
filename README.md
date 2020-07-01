@@ -4,7 +4,7 @@ This package is the second (the first one is for [optogenetic experiments](https
 
 This package is written to analyze photometry experiments and has 3 major steps: 
 
-1. processing the sessions 
+1. processing the sessions (all 7 processing steps are controlled from one notebook). 
 
 2. generate the data set 
 
@@ -13,9 +13,9 @@ This package is written to analyze photometry experiments and has 3 major steps:
 The goal was to write a pipeline that allows for others in the lab to write their own notebooks and add them to the pipeline seamlessly.
 Also, we wanted to generate rather simple data formats that can easily be shared with others outside the lab  but maintain in them the richeness of the data. 
 
-The choice of ehich notebook will determine what pipeline/analysis will be executed. 
+The choice of which notebook one runs in the processing step will determine what pipeline/analysis will be executed. 
 If specific output data structures already exist based on previous runs of the pipeline the "master jupyter notebook" will 
-recognize those data structures and only run what is needed to complete the new analyses. 
+recognize those data structures that are saved and only run what is needed to complete the new analyses. 
 This saves lots of time and allows to efficiently explore the data.
 
 The design of this behavioral task for mice was inspired by operant conditioning behavioral tasks. 
