@@ -8,7 +8,7 @@ This package is written to analyze photometry experiments and has 3 major steps:
 
 2. generate the data set 
 
-3. analyze the sessions/data set 
+3. analyze, plot and model the sessions/data set 
 
 The goal was to write a pipeline that allows for others in the lab to write there own notebooks and add them to the pipeline.  
 
