@@ -3,11 +3,9 @@
 This package is the second (the first one is for [optogenetic experiments](https://github.com/gilmandelbaum/analysis-pipeline-for-optogenetics_ex)) to support the analysis of a project in the [Sabatini Lab](https://sabatini.hms.harvard.edu/) at Harvard Medical School in which we try to better understand how the brain allows us to decide what to do next. 
 This package is written to analyze photometry experiments. 
 
-It uses jupyter noteboooks and each stage of the pipeline can be run stand-alone 
-or as part of work flow controlled by one "master jupyter notebook" that uses 
-the [papermill](https://papermill.readthedocs.io/en/latest/) library to control all the notebooks in the pipeline. 
+It uses jupyter noteboooks and each stage of the pipeline can be run stand-alone or as part of work flow controlled by one "master jupyter notebook" that uses 
+the [papermill](https://papermill.readthedocs.io/en/latest/) library to control all the notebooks in the pipeline. After each session is analyzed there is a second step called 
 
-This package is written to analyze photometry experiments. 
 The goal was to write a pipeline that allows for others in the lab to write there own notebooks and add them to the pipeline.  
 
 The choice of notebook will determine what pipeline/analysis will be executed. 
