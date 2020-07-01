@@ -61,4 +61,4 @@ You can also [correlate](https://github.com/gilmandelbaum/analysis-pipeline-for-
 ## Acknowledgments
 
 
-This analysis package was written by Gil Mandelbaum and Maria Diaz Bobillo with the help of [Jeff Markowitz](https://github.com/jmarkow) in the lab of [Bernardo Sabatini](https://sabatini.hms.harvard.edu/) at Harvard Medical School. 
+This analysis package was written by Gil Mandelbaum and Maria Diaz Bobillo with the help of [Jeff Markowitz](https://github.com/jmarkow) and Rebekah Zhang in the lab of [Bernardo Sabatini](https://sabatini.hms.harvard.edu/) at Harvard Medical School. 
