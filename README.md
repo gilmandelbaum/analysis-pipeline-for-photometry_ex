@@ -10,9 +10,10 @@ This package is written to analyze photometry experiments and has 3 major steps:
 
 3. analyze, plot and model the sessions/data set 
 
-The goal was to write a pipeline that allows for others in the lab to write there own notebooks and add them to the pipeline.  
+The goal was to write a pipeline that allows for others in the lab to write there own notebooks and add them to the pipeline seamlessly.
+Also, we wanted to generate data formats that can easily shared and maintain in them the richeness of the data. 
 
-The choice of notebook will determine what pipeline/analysis will be executed. 
+The choice of ehich notebook will determine what pipeline/analysis will be executed. 
 If specific output data structures already exist based on previous runs of the pipeline the "master jupyter notebook" will 
 recognize those data structures and only run what is needed to complete the new analyses. 
 This saves lots of time and allows to efficiently explore the data.
