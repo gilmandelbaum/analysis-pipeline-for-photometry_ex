@@ -17,7 +17,9 @@ generates one object in a .pickle fomat that that has the structure:
 plot the data in a line plot from various periods of interest. One can combine sessions in different ways too. (See explanation below).
 
 **papermill_data_set_lineplot_(ic_together).ipynb:**
-to run the data_set_lineplot_(ic_together) notebook. The papermill is to make changes to the period that is being plotted.
+to run the data_set_lineplot_(ic_together) notebook. The papermill is to make changes to the period that is being plotted. 
+ipsi and contra in the plots refers to the next trial.
+For example, if the plot is a LS ipsi and combined period 1 is plotted the sequence is: non reward period, last 1 second of ENL period 
 
 ### [right_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/right_side_of_the_brain) 
 all notebooks below are for the right hemisphere. 
