@@ -50,7 +50,7 @@ def generate_name_and_date(Date,Mouse):
     return ('20'+str(Date)[:2]+'_'+str(Date)[2:4]+'_'+str(Date)[4:6]+'__'+Mouse)
 
 
-def run_dataset_ (Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):   
+def run_dataset(Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):   
     
     folder_name_dict = {"0": "Nb_0x_pre_analysis",
                         "1": "Nb_1x_define_trials_of_interest",
