@@ -1,7 +1,11 @@
 # Notebook 6:
 adds combination of periods together from notebook 5. 
+
 input: notebook 5. 
+
 output: same structure as notebook 5 but with an added period combining periods. 
+
+can be a list of notebook 6s. (Does not have to be in order). 
 
 **How notebook 6s work:**
 
