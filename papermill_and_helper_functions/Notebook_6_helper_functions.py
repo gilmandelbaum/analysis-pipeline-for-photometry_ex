@@ -6,6 +6,94 @@ Created on Wed Feb 26 00:21:38 2020
 @author: gilmandelbaum
 """
 import pandas as pd
+from pathlib import Path
+import pickle
+
+"""
+How notebook 6s work:
+
+Each notebook 6 can run stand alone with a seq_str up until Nb5, including. 
+So for example, if the seq_str for the analysis is 0a1b2a3b4abcde5a6c7a , 
+notebook 6c will use the notebook 5 output object with the name 0a1b2a3b4abcde5a.
+
+If there are multiple notebooks 6 and you are running 
+the first version of the notebook 6 notebook 5 will be loaded. 
+For example, if the seq_str is 0a1b2a3b4abcde5a6bec7a , 
+and we are running notebook 6b. 
+Notebook 6b will load notebook 5 output object with the name 0a1b2a3b4abcde5a.
+
+However, if If there are multiple notebooks 6 and you are not running 
+the first version of the notebook 6, the previous notebook 6 will be loaded. 
+For example, if the seq_str is 0a1b2a3b4abcde5a6bec7a , and we are running notebook 6e. 
+Notebook 6e will load notebook 6 output object with the name 0a1b2a3b4abcde5a6b.
+"""
+
+
+def load_data_obj_general(data_dir_output,mouse,data_day,date,HowManyBack,seq_str,Nb_name,Nb5):
+    seq_until_Nb5= seq_str[:seq_str.index('6')]
+    print ("seq_until_Nb5:"+" "+seq_until_Nb5)
+    Nb6s_to_run = seq_str[seq_str.index("6"):seq_str.index("7")]
+    print ("Nb6s_to_run:"+" "+Nb6s_to_run)
+    #this means that there is only one version. 
+    
+    if (len(Nb6s_to_run) == 2) or (Nb6s_to_run[1] ==  Nb_name[-1]): 
+        print ("first notebook")
+        #so you load notebook5. 
+        
+        
+        #finds its path: 
+        root = Path(data_dir_output+"/"+mouse+"/"+data_day+'/'+str(HowManyBack)+"_Back")
+        d = mouse+"_"+date+"Notebook_5_"+Nb5+"_"+"seq"+seq_until_Nb5+'.pickle'
+        my_path = root / d 
+        
+        #open the object: 
+        fileToOpen = open(my_path, 'rb')
+        PhotoData_perTrial_channels = pickle.load(fileToOpen)
+        print ("loaded:"+str(my_path))
+        return (PhotoData_perTrial_channels)
+            
+    else: 
+        #this means that you are not running the first one in the seq of notebook 6s. 
+        #so you need to load a notebook 6. 
+        print ("not first notebook")
+        seq_6s_before_this_notebook = Nb6s_to_run[0:Nb6s_to_run.index(Nb_name[-1])]
+        #print (seq_6s_before_this_notebook)
+        seq_until_prev_Nb = seq_until_Nb5+seq_6s_before_this_notebook
+        #print (seq_until_prev_Nb)
+        
+        #finds its path: 
+        root = Path(data_dir_output+"/"+mouse+"/"+data_day+'/'+str(HowManyBack)+"_Back")
+        d = mouse+"_"+date+"Notebook_6_"+seq_6s_before_this_notebook[-1]+"_"+"seq"+seq_until_prev_Nb+'.pickle'
+        my_path = root / d 
+        
+        #open the object: 
+        fileToOpen = open(my_path, 'rb')
+        PhotoData_perTrial_channels = pickle.load(fileToOpen)
+        print ("loaded seq"+str(my_path))
+        return (PhotoData_perTrial_channels)
+
+     
+      
+        
+"""
+getting the seq for the notebook
+"""
+
+
+def seq_for_this_nb (seq_str,Nb_name):
+    
+    seq_until_Nb5= seq_str[:seq_str.index('6')]
+    Nb6s_to_run = seq_str[seq_str.index("6"):seq_str.index("7")]
+    
+    if (len(Nb6s_to_run) == 2) or (Nb6s_to_run[1] ==  Nb_name[-1]):
+        seq_for_this_nb = seq_until_Nb5+"6"+Nb6s_to_run[1]
+    else: 
+        seq_6s_with_this_notebook = Nb6s_to_run[0:(Nb6s_to_run.index(Nb_name[-1])+1)]
+        seq_for_this_nb = seq_until_Nb5+seq_6s_with_this_notebook
+    print (seq_for_this_nb)
+    return (seq_for_this_nb)
+
+
 
 #for notebook 6a: 
 
