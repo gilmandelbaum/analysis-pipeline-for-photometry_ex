@@ -19,6 +19,7 @@ However, if If there are multiple notebooks 6 and you are not running the first 
 For example, if the seq_str is 0a1b2a3b4abcde5a6bec7a , and we are running notebook 6e. Notebook 6e will load notebook 6 output object with the name 0a1b2a3b4abcde5a6b. 
 
 
+## combinations ##
 6_a: key 'combined_periods_1'. combining 1 sec pre-consumption lick, 3 sec rewarded or non rewarded period and 1 sec ENL period before the cue. 
 
 6_b: key 'combined_periods_2'. combining pre_Cue_to_Sel, Cue_to_Sel and Reward_NoReward. 
