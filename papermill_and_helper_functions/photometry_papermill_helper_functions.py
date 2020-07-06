@@ -50,7 +50,7 @@ def generate_name_and_date(Date,Mouse):
     return ('20'+str(Date)[:2]+'_'+str(Date)[2:4]+'_'+str(Date)[4:6]+'__'+Mouse)
 
 
-def run_dataset (Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):   
+def run_dataset_ (Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):   
     
     folder_name_dict = {"0": "Nb_0x_pre_analysis",
                         "1": "Nb_1x_define_trials_of_interest",
@@ -87,7 +87,7 @@ def run_dataset (Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):
                 notebook_path = "_seq"+seq_str[:seq_str.index('6')]
             elif notebook_number == "6": 
                 notebook_path = "_seq"+seq_str[:seq_str.index('7')]
-            else:
+            else: #notebook 7s: 
                 notebook_path = '_seq'+seq_str
 
 
@@ -99,12 +99,12 @@ def run_dataset (Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):
                 #if we need to run the notebook we need to add 4 keys to the dict_for_pm. 
                 
                 dict_for_pm["mouse"]=mouse 
-                #dict_for_pm["date_and_name"]=date_and_name
-                #dict_for_pm["date_"]=date_
                 dict_for_pm["data_day"]=date_and_name
                 dict_for_pm["date"]=date_
                 dict_for_pm["photo_day"] = photometry_data_file_name
+                
                 print (date_and_name+"_"+photometry_data_file_name)
                 print('Notebook_'+notebook_number+'_'+notebook_version+'.ipynb is being executed')
+                
                 pm.execute_notebook(nb_path+folder_name+"/"+'Notebook_'+str(notebook_number)+'_'+notebook_version+'.ipynb', 'TestOutPut.ipynb',kernel_name = "python3", parameters= dict_for_pm,nest_asyncio=True)
     return 
