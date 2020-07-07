@@ -10,18 +10,14 @@ For example, if the plot is a LS ipsi and combined period 1 is plotted the seque
 all notebooks below are for the right hemisphere. 
 
 **0.dsl__winall(no_dirc)_loseall(no_dirc)__rs.ipynb:**
+plots the wins together (win repeat + win switch) and the loses together (lose repeat + lose switch). 
 
 **1.dsl__winall(ipsi_vs_contra)_loseall(ipsi_vs_contra)__rs.ipynb:**
+plots the wins together (win repeat + win switch) ipsi vs contra  and the loses together (lose repeat + lose switch) ipsi vs contra . 
 
 **2.dsl__ipsinext(winall_vs_loseall)_contranext(winall_vs_loseall)__rs.ipynb:** 
-
-**data_set_lineplot_win_or_lose_trial_right_side.ipynb:**
-plots the wins together ipsi vs contra (win repeat + win switch) and the loses together ipsi vs contra (lose repeat + lose switch). 
-
-**data_set_lineplot_win_and_lose_trial_right_side.ipynb:**
-plots the wins and loses together ipsi on the next.
-plots the wins and loses together contra on the next.
-
+plots ipsi on the next, wins vs loses.  
+plots contra on the next, wins vs loses.
 
 **3.dsl__winrepeat(ipsi_vs_contra)_loseswitch(ipsi_vs_contra)__rs.ipynb**
 plots similar to [7b](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/blob/master/Nb_7x_plots/Notebook_7_b.ipynb) 
