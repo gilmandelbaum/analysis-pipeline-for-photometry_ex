@@ -1,4 +1,4 @@
-# [0.data set generate](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/0.data_set_generate)
+# [0.data set generate]
 
 **data_set_generate_data_object.ipynb:**
 generates one object in a .pickle fomat that that has the structure:
