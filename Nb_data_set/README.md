@@ -1,7 +1,7 @@
 
 # Nb_data_set (Data set analysis)
 
-The structure of the data analysis folders is: 
+The structure of the data analysis folders are: 
 name of analysis-->seq to be analyzed-->type of analysis-->period analyzed.
 
 
