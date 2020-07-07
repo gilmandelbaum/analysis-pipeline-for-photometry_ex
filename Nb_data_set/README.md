@@ -31,6 +31,14 @@ plots similar to
 [7b](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/blob/master/Nb_7x_plots/Notebook_7_b.ipynb) 
 but for a data set: it takes the avg from each session and makes a line plot of the avg of all the sessions from the right hemisphere. 
 
+**data_set_lineplot_win_or_lose_trial_right_side.ipynb:**
+plots the wins together ipsi vs contra (win repeat + win switch) and the loses together ipsi vs contra (lose repeat + lose switch) 
+
+**data_set_lineplot_win_and_lose_trial_right_side.ipynb:**
+plots the wins and loses together ipsi on the next
+plots the wins and loses together contra on the next
+
+
 ### [left_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain)
 all notebooks below are for the left hemisphere. 
 
@@ -39,6 +47,8 @@ plots similar to
 [7c](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/blob/master/Nb_7x_plots/Notebook_7_c.ipynb) 
 but for a data set: it takes the avg from each session and makes a line plot of the avg of all the sessions from the left hemisphere. 
 
+**data_set_lineplot_win_or_lose_trial_left_side.ipynb:**
+plots the wins together ipsi vs contra (win repeat + win switch) and the loses together ipsi vs contra (lose repeat + lose switch) 
 
 # [2.data_set_calculate: (per session)](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations)
 extracting features (numbers!) from the traces per session, i.e. each sessions is avg and represented by one number. 
