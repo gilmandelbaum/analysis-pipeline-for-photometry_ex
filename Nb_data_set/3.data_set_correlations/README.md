@@ -1,5 +1,5 @@
 
-#3.data_set_correlations: 
+# 3.data_set_correlations: 
 (per trial)
 extracting features (numbers!) from the traces and from the behavior to see if they are correlated. Each trial is treated independently. 
 
