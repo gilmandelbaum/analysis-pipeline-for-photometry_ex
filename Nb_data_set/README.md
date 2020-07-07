@@ -8,7 +8,7 @@ name of analysis-->seq to be analyzed-->type of analysis-->period analyzed.
 [0.data set generate:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/0.data_set_generate)
 generating data set of interest from photometry signal or trial data to use for analysis. 
 
-[1.data_set_lineplot:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_lineplot)
+[1.data_set_lineplot:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot)
 Various types of line plots. Notebookes can also run with a papermill to plot different periods of interest one after the other. 
 
 [2.data_set_calculate:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations)
