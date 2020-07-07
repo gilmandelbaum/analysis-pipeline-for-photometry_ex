@@ -18,8 +18,14 @@ used in data_set_plots_ic_and_sessions_combined
 """ 
 
 def extract_data_of_interest_ipsi_contra_per_session_helper (PhotoData_perTrial_channels,rl,tt,period,cell_type):
-    ipsi_next = PhotoData_perTrial_channels[rl][0][tt][period][cell_type]
-    contra_next = PhotoData_perTrial_channels[rl][1][tt][period][cell_type]
+    try: 
+        ipsi_next = PhotoData_perTrial_channels[rl][0][tt][period][cell_type]
+        contra_next = PhotoData_perTrial_channels[rl][1][tt][period][cell_type]
+        print ("full")
+    except:
+        ipsi_next = pd.DataFrame()
+        contra_next = pd.DataFrame()
+        print ("empty")
     return (ipsi_next,contra_next)
     
 
@@ -36,7 +42,7 @@ def extract_data_of_interest_ipsi_contra_data_set (PhotoData_perTrial_channels_d
     return (ipsi_contra_data_set)
     
     
-def calculate_mean_data_set (ipsi_contra_data_set): #
+def calculate_mean_data_set (ipsi_contra_data_set): 
     
     df_ipsi_next = pd.DataFrame()
     df_contra_next = pd.DataFrame()
@@ -124,10 +130,70 @@ def plot_ipsi_contra_together (data_ipsi_contra_mean_sem,sem_traces,
     plt.show()
     
      
+
+def plot_win_lose_together_ipsi_prev (data_win_ipsi_contra_mean_sem,win_sem_traces,
+                                data_lose_ipsi_contra_mean_sem,lose_sem_traces,
+                                trial_type,period_of_interest,cell_type,y_axis,path_to_plot):
+
+    #number of sessions is the same ipsi and contra. 
     
+    plt.plot(data_win_ipsi_contra_mean_sem[0],linewidth=2, label="win_ipsi_prev"+" "+"("+str(data_win_ipsi_contra_mean_sem[4])+")")
+    plt.plot(data_lose_ipsi_contra_mean_sem[1],linewidth=2, label="lose_ipsi_prev"+" "+"("+str(data_lose_ipsi_contra_mean_sem[4])+")")
+    
+    plt.plot(win_sem_traces[0],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(win_sem_traces[1],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(lose_sem_traces[2],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(lose_sem_traces[3],color='black', linewidth=0.5,alpha=0.8)
+    
+    # Add legend
+    plt.legend(loc='lower left')
+    
+    
+    # Add title and x, y labels
+    title = trial_type+"_"+"("+period_of_interest+")"
+    plt.title(title, fontsize=16, fontweight='bold')
+    plt.suptitle(cell_type, fontsize=16)
+
+    plt.xlabel("time_bins")
+    
+    #the y axis is defined in the paper mill. This allows to run 7_b with 3a,3b,3c and any future 3s, easliy changing the 
+    #the name of the y axis to not cause confusion. 
+    plt.ylabel(y_axis)
+    plt.savefig(path_to_plot+"/"+"_"+trial_type+cell_type+"_"+period_of_interest+'.pdf')
+    plt.show()
 
 
     
     
     
     
+def plot_win_lose_together_contra_prev (data_win_ipsi_contra_mean_sem,win_sem_traces,
+                                data_lose_ipsi_contra_mean_sem,lose_sem_traces,
+                                trial_type,period_of_interest,cell_type,y_axis,path_to_plot):
+
+    #number of sessions is the same ipsi and contra. 
+    
+    plt.plot(data_win_ipsi_contra_mean_sem[1],linewidth=2, label="win_contra_prev"+" "+"("+str(data_win_ipsi_contra_mean_sem[4])+")")
+    plt.plot(data_lose_ipsi_contra_mean_sem[0],linewidth=2, label="lose_contra_prev"+" "+"("+str(data_lose_ipsi_contra_mean_sem[4])+")")
+    
+    plt.plot(win_sem_traces[2],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(win_sem_traces[3],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(lose_sem_traces[0],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(lose_sem_traces[1],color='black', linewidth=0.5,alpha=0.8)
+    
+    # Add legend
+    plt.legend(loc='lower left')
+    
+    
+    # Add title and x, y labels
+    title = trial_type+"_"+"("+period_of_interest+")"
+    plt.title(title, fontsize=16, fontweight='bold')
+    plt.suptitle(cell_type, fontsize=16)
+
+    plt.xlabel("time_bins")
+    
+    #the y axis is defined in the paper mill. This allows to run 7_b with 3a,3b,3c and any future 3s, easliy changing the 
+    #the name of the y axis to not cause confusion. 
+    plt.ylabel(y_axis)
+    plt.savefig(path_to_plot+"/"+"_"+trial_type+cell_type+"_"+period_of_interest+'.pdf')
+    plt.show()
