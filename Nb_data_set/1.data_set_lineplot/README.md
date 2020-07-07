@@ -1,4 +1,4 @@
-# [1.data_set_lineplot](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_lineplot)
+# 1.data_set_lineplot
 plot the data in a line plot from various periods of interest. One can combine sessions in different ways too. (See explanation below).
 
 **papermill_data_set_lineplot_(ic_together).ipynb:**
