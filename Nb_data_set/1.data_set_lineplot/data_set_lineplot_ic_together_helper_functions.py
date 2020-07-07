@@ -99,6 +99,8 @@ def make_sem_traces (data_ipsi_contra_mean_sem):
 #data_ipsi_contra_mean_sem is the output of calculate_mean_sem
 #sem_traces is the output of make_sem_traces.
 
+#used to plot both win repeat ipsi_contra and lose switch ipsi_contra
+#also to plot win ipsi/contra and lose ipsi/contra. 
 
 def plot_ipsi_contra_together (data_ipsi_contra_mean_sem,sem_traces,
                                trial_type,period_of_interest,cell_type,y_axis,path_to_plot):
@@ -129,8 +131,7 @@ def plot_ipsi_contra_together (data_ipsi_contra_mean_sem,sem_traces,
     plt.savefig(path_to_plot+"/"+"_"+trial_type+cell_type+"_"+period_of_interest+'.pdf')
     plt.show()
     
-     
-
+     #used to plot win and lose choice to the ipsi on the previous
 def plot_win_lose_together_ipsi_prev (data_win_ipsi_contra_mean_sem,win_sem_traces,
                                 data_lose_ipsi_contra_mean_sem,lose_sem_traces,
                                 trial_type,period_of_interest,cell_type,y_axis,path_to_plot):
@@ -138,7 +139,7 @@ def plot_win_lose_together_ipsi_prev (data_win_ipsi_contra_mean_sem,win_sem_trac
     #number of sessions is the same ipsi and contra. 
     
     plt.plot(data_win_ipsi_contra_mean_sem[0],linewidth=2, label="win_ipsi_prev"+" "+"("+str(data_win_ipsi_contra_mean_sem[4])+")")
-    plt.plot(data_lose_ipsi_contra_mean_sem[1],linewidth=2, label="lose_ipsi_prev"+" "+"("+str(data_lose_ipsi_contra_mean_sem[4])+")")
+    plt.plot(data_lose_ipsi_contra_mean_sem[2],linewidth=2, label="lose_ipsi_prev"+" "+"("+str(data_lose_ipsi_contra_mean_sem[4])+")")
     
     plt.plot(win_sem_traces[0],color='black', linewidth=0.5,alpha=0.8)
     plt.plot(win_sem_traces[1],color='black', linewidth=0.5,alpha=0.8)
@@ -166,20 +167,86 @@ def plot_win_lose_together_ipsi_prev (data_win_ipsi_contra_mean_sem,win_sem_trac
     
     
     
-    
+    #used to plot win and lose choice to the contra on the previous
+ 
 def plot_win_lose_together_contra_prev (data_win_ipsi_contra_mean_sem,win_sem_traces,
                                 data_lose_ipsi_contra_mean_sem,lose_sem_traces,
                                 trial_type,period_of_interest,cell_type,y_axis,path_to_plot):
 
     #number of sessions is the same ipsi and contra. 
     
-    plt.plot(data_win_ipsi_contra_mean_sem[1],linewidth=2, label="win_contra_prev"+" "+"("+str(data_win_ipsi_contra_mean_sem[4])+")")
+    plt.plot(data_win_ipsi_contra_mean_sem[2],linewidth=2, label="win_contra_prev"+" "+"("+str(data_win_ipsi_contra_mean_sem[4])+")")
     plt.plot(data_lose_ipsi_contra_mean_sem[0],linewidth=2, label="lose_contra_prev"+" "+"("+str(data_lose_ipsi_contra_mean_sem[4])+")")
     
     plt.plot(win_sem_traces[2],color='black', linewidth=0.5,alpha=0.8)
     plt.plot(win_sem_traces[3],color='black', linewidth=0.5,alpha=0.8)
     plt.plot(lose_sem_traces[0],color='black', linewidth=0.5,alpha=0.8)
     plt.plot(lose_sem_traces[1],color='black', linewidth=0.5,alpha=0.8)
+    
+    # Add legend
+    plt.legend(loc='lower left')
+    
+    
+    # Add title and x, y labels
+    title = trial_type+"_"+"("+period_of_interest+")"
+    plt.title(title, fontsize=16, fontweight='bold')
+    plt.suptitle(cell_type, fontsize=16)
+
+    plt.xlabel("time_bins")
+    
+    #the y axis is defined in the paper mill. This allows to run 7_b with 3a,3b,3c and any future 3s, easliy changing the 
+    #the name of the y axis to not cause confusion. 
+    plt.ylabel(y_axis)
+    plt.savefig(path_to_plot+"/"+"_"+trial_type+cell_type+"_"+period_of_interest+'.pdf')
+    plt.show()
+
+
+
+def plot_win_lose_together_ipsi_next (data_win_ipsi_contra_mean_sem,win_sem_traces,
+                                data_lose_ipsi_contra_mean_sem,lose_sem_traces,
+                                trial_type,period_of_interest,cell_type,y_axis,path_to_plot):
+
+    #number of sessions is the same ipsi and contra. 
+    
+    plt.plot(data_win_ipsi_contra_mean_sem[0],linewidth=2, label="win_ipsi_next"+" "+"("+str(data_win_ipsi_contra_mean_sem[4])+")")
+    plt.plot(data_lose_ipsi_contra_mean_sem[0],linewidth=2, label="lose_ipsi_next"+" "+"("+str(data_lose_ipsi_contra_mean_sem[4])+")")
+    
+    plt.plot(win_sem_traces[0],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(win_sem_traces[1],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(lose_sem_traces[0],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(lose_sem_traces[1],color='black', linewidth=0.5,alpha=0.8)
+    
+    # Add legend
+    plt.legend(loc='lower left')
+    
+    
+    # Add title and x, y labels
+    title = trial_type+"_"+"("+period_of_interest+")"
+    plt.title(title, fontsize=16, fontweight='bold')
+    plt.suptitle(cell_type, fontsize=16)
+
+    plt.xlabel("time_bins")
+    
+    #the y axis is defined in the paper mill. This allows to run 7_b with 3a,3b,3c and any future 3s, easliy changing the 
+    #the name of the y axis to not cause confusion. 
+    plt.ylabel(y_axis)
+    plt.savefig(path_to_plot+"/"+"_"+trial_type+cell_type+"_"+period_of_interest+'.pdf')
+    plt.show()
+
+
+def plot_win_lose_together_contra_next (data_win_ipsi_contra_mean_sem,win_sem_traces,
+                                data_lose_ipsi_contra_mean_sem,lose_sem_traces,
+                                trial_type,period_of_interest,cell_type,y_axis,path_to_plot):
+
+    #number of sessions is the same ipsi and contra. 
+    
+    plt.plot(data_win_ipsi_contra_mean_sem[2],linewidth=2, label="win_contra_next"+" "+"("+str(data_win_ipsi_contra_mean_sem[4])+")")
+    plt.plot(data_lose_ipsi_contra_mean_sem[2],linewidth=2, label="lose_contra_next"+" "+"("+str(data_lose_ipsi_contra_mean_sem[4])+")")
+    
+    plt.plot(win_sem_traces[2],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(win_sem_traces[3],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(lose_sem_traces[2],color='black', linewidth=0.5,alpha=0.8)
+    plt.plot(lose_sem_traces[3],color='black', linewidth=0.5,alpha=0.8)
     
     # Add legend
     plt.legend(loc='lower left')
