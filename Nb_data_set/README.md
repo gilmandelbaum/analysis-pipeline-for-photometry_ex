@@ -32,11 +32,11 @@ plots similar to
 but for a data set: it takes the avg from each session and makes a line plot of the avg of all the sessions from the right hemisphere. 
 
 **data_set_lineplot_win_or_lose_trial_right_side.ipynb:**
-plots the wins together ipsi vs contra (win repeat + win switch) and the loses together ipsi vs contra (lose repeat + lose switch) 
+plots the wins together ipsi vs contra (win repeat + win switch) and the loses together ipsi vs contra (lose repeat + lose switch). 
 
 **data_set_lineplot_win_and_lose_trial_right_side.ipynb:**
-plots the wins and loses together ipsi on the next
-plots the wins and loses together contra on the next
+plots the wins and loses together ipsi on the next.
+plots the wins and loses together contra on the next.
 
 
 ### [left_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain)
