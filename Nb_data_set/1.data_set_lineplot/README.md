@@ -28,4 +28,4 @@ but for a data set: it takes the avg from each session and makes a line plot of 
 
 
 ### [left_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain)
-all notebooks are similar to the right side but with a __ls at the end. 
+all notebooks are similar to the right side but with a   __ls at the end. 
