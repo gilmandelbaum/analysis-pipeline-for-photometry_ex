@@ -39,9 +39,11 @@ def extract_data_of_interest_ipsi_contra_data_set (PhotoData_perTrial_channels_d
         ipsi_contra = extract_data_of_interest_ipsi_contra_per_session_helper (PhotoData_perTrial_channels,rl,tt,period,cell_type)
         ipsi_contra_data_set.append(ipsi_contra)
         
-    return (ipsi_contra_data_set)
-    
-    
+    return (ipsi_contra_data_set) 
+
+
+
+
 def calculate_mean_data_set (ipsi_contra_data_set): 
     
     df_ipsi_next = pd.DataFrame()
@@ -115,7 +117,7 @@ def plot_ipsi_contra_together (data_ipsi_contra_mean_sem,sem_traces,
     plt.plot(sem_traces[3],color='black', linewidth=0.5,alpha=0.8)
     
     # Add legend
-    plt.legend(loc='lower left')
+    plt.legend(loc='upper right')
     
     
     # Add title and x, y labels
@@ -147,7 +149,7 @@ def plot_win_lose_together_ipsi_prev (data_win_ipsi_contra_mean_sem,win_sem_trac
     plt.plot(lose_sem_traces[3],color='black', linewidth=0.5,alpha=0.8)
     
     # Add legend
-    plt.legend(loc='lower left')
+    plt.legend(loc='upper right')
     
     
     # Add title and x, y labels
@@ -184,7 +186,7 @@ def plot_win_lose_together_contra_prev (data_win_ipsi_contra_mean_sem,win_sem_tr
     plt.plot(lose_sem_traces[1],color='black', linewidth=0.5,alpha=0.8)
     
     # Add legend
-    plt.legend(loc='lower left')
+    plt.legend(loc='upper right')
     
     
     # Add title and x, y labels
@@ -217,7 +219,7 @@ def plot_win_lose_together_ipsi_next (data_win_ipsi_contra_mean_sem,win_sem_trac
     plt.plot(lose_sem_traces[1],color='black', linewidth=0.5,alpha=0.8)
     
     # Add legend
-    plt.legend(loc='lower left')
+    plt.legend(loc='upper right')
     
     
     # Add title and x, y labels
@@ -249,7 +251,7 @@ def plot_win_lose_together_contra_next (data_win_ipsi_contra_mean_sem,win_sem_tr
     plt.plot(lose_sem_traces[3],color='black', linewidth=0.5,alpha=0.8)
     
     # Add legend
-    plt.legend(loc='lower left')
+    plt.legend(loc='upper right')
     
     
     # Add title and x, y labels
