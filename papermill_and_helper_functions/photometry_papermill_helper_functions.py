@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Created on Thu Jul  9 17:40:23 2020
+
+@author: gilmandelbaum
+"""
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
 Created on Wed May 13 14:30:28 2020
 
 @author: gilmandelbaum
@@ -62,10 +70,10 @@ def run_dataset(Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):
                         "7": "Nb_7x_plots"}
     
     #generate 4 lists.
-    l_mouse = list(Mouse_Date_FileName["Mouse"]) 
-    l_date_ = list(Mouse_Date_FileName.apply(lambda x: generate_date_(x["Date"]),axis=1))  
-    l_date_and_name = list(Mouse_Date_FileName.apply(lambda x: generate_name_and_date(x["Date"],x["Mouse"]),axis=1))
-    l_photometry_data_file_name = list (Mouse_Date_FileName["File name"])
+    l_mouse = list(Mouse_Date_FileName["mouse"]) 
+    l_date_ = list(Mouse_Date_FileName.apply(lambda x: generate_date_(x["date"]),axis=1))  
+    l_date_and_name = list(Mouse_Date_FileName.apply(lambda x: generate_name_and_date(x["date"],x["mouse"]),axis=1))
+    l_photometry_data_file_name = list (Mouse_Date_FileName["file name"])
     
     
     data_dir_output = dict_for_pm["data_dir_output"]
@@ -81,15 +89,17 @@ def run_dataset(Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):
 
             
             #make notebook path: 
-            if notebook_number in ["0","1","2","3","4"]:
+            if notebook_number in ["0","1","2","4"]:
                 notebook_path = ""
+                
+            elif notebook_number == "3":
+                notebook_path = "_seq"+seq_str[seq_str.index("2"):seq_str.index("4")]
             elif notebook_number == "5": 
                 notebook_path = "_seq"+seq_str[:seq_str.index('6')]
             elif notebook_number == "6": 
                 notebook_path = "_seq"+seq_str[:seq_str.index('7')]
             else: #notebook 7s: 
                 notebook_path = '_seq'+seq_str
-
 
             if os.path.isfile(data_dir_output+"/"+mouse+"/"+date_and_name+'/'+str(HowManyBack)+'_Back/'+mouse+"_"+date_+'Notebook_'+str(notebook_number)+'_'+notebook_version+notebook_path+'.pickle'):
                 pass
