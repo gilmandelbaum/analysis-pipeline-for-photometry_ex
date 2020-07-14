@@ -4,7 +4,7 @@
 generates one object in a .pickle fomat that that has the structure:
 [Session number][Right or left side of the brain][ipsi or contra response][trial type]{period}.
 
-**data_set_generate_data_object_photometry_after_down_sampling:**
+**data_set_generate_data_object_photometry_after_down_sampling.ipynb:**
 generates one object in a .pickle fomat that that has the structure:
 [Session number] [df with the photometry data after it with processed and downsampled]
 
