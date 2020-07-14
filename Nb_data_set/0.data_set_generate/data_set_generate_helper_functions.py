@@ -28,9 +28,9 @@ def extract_data_set(Mouse_Date_FileName,data_to_be_plotted,HowManyBack,seq_str)
     counter = 1 
     
     #generate 3 lists.
-    l_mouse = list(Mouse_Date_FileName["Mouse"]) 
-    l_date_ = list(Mouse_Date_FileName.apply(lambda x: generate_date_(x["Date"]),axis=1))  
-    l_date_and_name = list(Mouse_Date_FileName.apply(lambda x: generate_name_and_date(x["Date"],x["Mouse"]),axis=1))
+    l_mouse = list(Mouse_Date_FileName["mouse"]) 
+    l_date_ = list(Mouse_Date_FileName.apply(lambda x: generate_date_(x["date"]),axis=1))  
+    l_date_and_name = list(Mouse_Date_FileName.apply(lambda x: generate_name_and_date(x["date"],x["mouse"]),axis=1))
     
     numer_of_sessions_dataset = len(l_mouse)
     
