@@ -16,3 +16,6 @@ Per session. Extracting features (numbers!) from the traces per session, i.e. ea
 
 [3.data_set_correlations:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/3.data_set_correlations)
 Per trial. Extracting features (numbers!) from the traces and from the behavior to see if they are correlated. Each trial is treated independently. 
+
+[4.data_set_full_session_trace_plots:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/3.data_set_correlations)
+Plot a part of the session with a horizontal line which defines a specific state, for exmaple, the choice lick
