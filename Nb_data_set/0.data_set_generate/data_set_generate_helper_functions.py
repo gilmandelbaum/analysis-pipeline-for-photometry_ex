@@ -25,8 +25,8 @@ def generate_name_and_date(Date,Mouse):
 0.data_set_generate_data_object_data_trial:
 """
 
-def extract_data_object_data_trial(Mouse_Date_FileName,data_to_be_plotted,HowManyBack):
-    PhotoData_perTrial_channels_data_set = []
+def extract_data_object_data_trial(Mouse_Date_FileName,path,HowManyBack):
+    data_trial_data_set = []
     counter = 1 
     
     l_mouse = list(Mouse_Date_FileName["mouse"]) 
@@ -37,17 +37,17 @@ def extract_data_object_data_trial(Mouse_Date_FileName,data_to_be_plotted,HowMan
     
     for (mouse, date_, date_and_name) in zip(l_mouse, l_date_, l_date_and_name):
         print ("session number"+" "+str(counter)+" "+"was imported (out of"+" "+str(numer_of_sessions_dataset)+")")
-        root = Path(data_to_be_plotted+"/"+mouse+"/"+date_and_name+'/'+str(HowManyBack)+"_Back")
+        root = Path(path+"/"+mouse+"/"+date_and_name+'/'+str(HowManyBack)+"_Back")
         d = mouse+"_"+date_+"Notebook_0_a"+'.pickle'
         my_path = root / d 
         
         fileToOpen = open(my_path, 'rb')
         # load the pickle: 
-        PhotoData_perTrial_channels = pickle.load(fileToOpen)
+        data_trial = pickle.load(fileToOpen)
         counter += 1       
-        PhotoData_perTrial_channels_data_set.append(PhotoData_perTrial_channels)  
+        data_trial_data_set.append(data_trial)  
     
-    return PhotoData_perTrial_channels_data_set
+    return data_trial_data_set
 
 """
 1.data_set_generate_data_object_photometry_raw_traces
@@ -161,3 +161,13 @@ def extract_data_object_photometry_after_processing(Mouse_Date_FileName,path,How
         PhotoData_perTrial_channels_data_set.append(PhotoData_perTrial_channels)
         
     return PhotoData_perTrial_channels_data_set
+
+
+
+"""
+4.data_set_generate_data_object_data_lick
+"""
+
+
+
+
