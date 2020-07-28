@@ -52,7 +52,7 @@ After all the session are analyzed there is a second step that generates a uniqu
 
 
 ### 3. analyze the sessions/data set 
-The third step is to analyze the [data](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set) 
+The third step is to [analyze the data](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set). 
 Currently, you can [plot](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot) over 20 periods of interest as a line plot and compare trial types/direction of choice and do so for right hemisphere recordings and left hemisphere recordings as well. 
 You can also [calculate](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/2.data_set_calculations) and compare various parameters from the photometry signal.
 You can also [correlate](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/3.data_set_correlations) between photomotery signals and behavioral events. 
