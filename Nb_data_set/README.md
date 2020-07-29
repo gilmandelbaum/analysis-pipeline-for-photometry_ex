@@ -19,3 +19,6 @@ Per trial. Extracting features (numbers!) from the traces and from the behavior 
 
 [4.data_set_full_session_trace_plots:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/4.data_set_full_session_trace_plots)
 Plot a part of the session with a horizontal line which defines a specific state, for example, the choice lick.
+
+[5.data_set_counters:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/5.data_set_counters)
+counting various aspects of data set. For example nubmer of trials, or number of licks. 
