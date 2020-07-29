@@ -6,6 +6,12 @@ to run the data_set_lineplot_(ic_together) notebook. The papermill is to make ch
 ipsi and contra in the plots refers to the next trial.
 For example, if the plot is a LS ipsi and combined period 1 is plotted the sequence is: 1 sec before the non reward period, the non rewarded period after the mouse made a choice contra to the recording, last 1 second of ENL period. 
 
+**avg_of_mice:**
+each thin line represents an avg of sesssions per mouse and the thick line represents the avg across mice. 
+**avg_of_sessions:**
+the line represents the avg of all sessions from all mice. (treating each session as independent).
+
+
 ### [right_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/right_side_of_the_brain) 
 all notebooks below are for the right hemisphere. 
 
