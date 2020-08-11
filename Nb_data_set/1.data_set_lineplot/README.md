@@ -47,7 +47,8 @@ plots the win repeat or lose switch trials that the previous was an ipsi respons
 ### [right_side_of_the_brain avg across mice](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain/avg_of_mice)
 
 
-### [left_side_of_the_brain avg across sessions](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain/avg_of_sessions) all notebooks are similar to the right side but with __ls at the end to signify that they are for left hemisphere analysis. 
+### [left_side_of_the_brain avg across sessions](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain/avg_of_sessions) all notebooks are similar to the right side but with __ls and sess at the end to signify that they are for left hemisphere analysis and avg across sessions. 
 
 
-### [left_side_of_the_brain avg across mice](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain/avg_of_mice)
+### [left_side_of_the_brain avg across mice](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/left_side_of_the_brain/avg_of_mice) all notebooks are similar to the right side but with __ls and mice at the end to signify that they are for left hemisphere analysis and avg across mice. 
+
