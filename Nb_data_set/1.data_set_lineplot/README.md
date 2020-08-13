@@ -49,7 +49,7 @@ plots the win repeat vs the lose switch trials with the next being either ipsi o
 plots the win repeat vs the lose switch trials with the previous being either ipsi of contra. 
 
 
-### [right_side_of_the_brain avg across sessions](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot/right_side_of_the_brain/avg_of_mice)
+### [right_side_of_the_brain avg across sessions](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot/right_side_of_the_brain/avg_of_sessions)
 
 ### [left_side_of_the_brain avg across mice](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot/left_side_of_the_brain/avg_of_mice) all notebooks are similar to the right side but with __ls and mice at the end to signify that they are for left hemisphere analysis and avg across mice. 
 
