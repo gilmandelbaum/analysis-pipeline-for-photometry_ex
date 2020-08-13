@@ -18,7 +18,7 @@ There are more notebooks for avg_of_mice compared to avg of sessions.
 **avg_of_mice:**
 each thin line is a mouse and each thick line is a the avg across mice. 
 
-### [right_side_of_the_brain:](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/data_set_calculations/right_side_of_the_brain/avg_of_mice) 
+### [right_side_of_the_brain avg across mice](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot/right_side_of_the_brain/avg_of_mice)
 all notebooks below are for the right hemisphere (right side (rs)) and avg of mice (mice). 
 
 **0.dsl__winall(no_dirc)_loseall(no_dirc)__rs_mice.ipynb:**
@@ -49,13 +49,12 @@ plots the win repeat vs the lose switch trials with the next being either ipsi o
 plots the win repeat vs the lose switch trials with the previous being either ipsi of contra. 
 
 
-###
+### [right_side_of_the_brain avg across sessions](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot/right_side_of_the_brain/avg_of_mice)
 
-### [right_side_of_the_brain avg across mice](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot/right_side_of_the_brain/avg_of_mice)
-
+### [left_side_of_the_brain avg across mice](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot/left_side_of_the_brain/avg_of_mice) all notebooks are similar to the right side but with __ls and mice at the end to signify that they are for left hemisphere analysis and avg across mice. 
 
 ### [left_side_of_the_brain avg across sessions](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot/left_side_of_the_brain/avg_of_sessions) all notebooks are similar to the right side but with __ls and sess at the end to signify that they are for left hemisphere analysis and avg across sessions. 
 
 
-### [left_side_of_the_brain avg across mice](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set/1.data_set_lineplot/left_side_of_the_brain/avg_of_mice) all notebooks are similar to the right side but with __ls and mice at the end to signify that they are for left hemisphere analysis and avg across mice. 
+
 
