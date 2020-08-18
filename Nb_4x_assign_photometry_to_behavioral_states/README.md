@@ -5,7 +5,7 @@ output: .pickle that has a data frame with two columns. The first column is the 
 
 4_a: Reward_NoReward_tag: consumption or no rewarded period.
 
-4_b: ENL_tag: enforced non lick period task.
+4_b: ENL_tag: enforced non lick period tag.
 
 4_c: Cue_to_Sel_tag: the period of the cue and the response time.
 
