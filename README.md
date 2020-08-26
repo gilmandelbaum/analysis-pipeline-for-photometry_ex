@@ -33,7 +33,7 @@ Here are some simple commands you can run in the terminal to get going.
 
 ```sh
 cd github
-git clone https://github.com/gilmandelbaum/analysis-pipeline-for-optogenetics_ex
+git clone https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex
 conda create -n optogenetics_env python=3.7.3
 conda activate photometry_env
 cd analysis-pipeline-for-optogenetics_ex
