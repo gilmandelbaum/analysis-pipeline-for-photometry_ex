@@ -21,6 +21,29 @@ This saves lots of time and allows to efficiently explore the data.
 The design of this behavioral task for mice was inspired by operant conditioning behavioral tasks. 
 For more details see [task description](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/blob/master/task_description.md)
 
+## Getting started
+
+The photometry_analysis pipeline was tested using python 3.7.3. 
+
+It is recommended to install it in a separate conda environment. 
+
+The papermill.execute function in the [photometry_papermill.ipynb notebook](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/blob/master/papermill_and_helper_functions/photometry_papermill.ipynb) calls upon a specific kernel called photometry_env. 
+
+Here are some simple commands you can run in the terminal to get going. 
+
+```sh
+cd github
+git clone https://github.com/gilmandelbaum/analysis-pipeline-for-optogenetics_ex
+conda create -n optogenetics_env python=3.7.3
+conda activate photometry_env
+cd analysis-pipeline-for-optogenetics_ex
+pip install -r requirements.txt 
+python -m ipykernel install --user --name photometry_env --display-name "photometry_env"
+jupyter notebook
+```
+
+
+
 ## For each session the stages of analysis are:
 
 ### 1. processing the sessions 
@@ -59,3 +82,6 @@ The third step is to [analyze the data](https://github.com/gilmandelbaum/analysi
 
 
 This analysis package was written by Gil Mandelbaum and Maria Diaz Bobillo with the help of [Jeff Markowitz](https://github.com/jmarkow) and Rebekah Zhang in the lab of [Bernardo Sabatini](https://sabatini.hms.harvard.edu/) at Harvard Medical School. 
+
+
+
