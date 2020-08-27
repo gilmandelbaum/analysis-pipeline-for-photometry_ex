@@ -57,7 +57,7 @@ After all the session are analyzed there is a second step that generates a uniqu
 The third step is to [analyze the data](https://github.com/gilmandelbaum/analysis-pipeline-for-photometry_ex/tree/master/Nb_data_set). there are currently a few dozen notebooks for analysis. 
 
 
-## Getting started
+# Getting started
 
 The photometry_analysis pipeline was tested using python 3.7.3. 
 
