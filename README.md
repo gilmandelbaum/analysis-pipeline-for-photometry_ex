@@ -4,7 +4,7 @@ This package is the second (the first one is for [optogenetic experiments](https
 
 This package is written to analyze photometry experiments and has 3 major steps: 
 
-1. processing the sessions (all 7 processing steps are controlled from one notebook). 
+1. processing the recrodings sessions (all 7 processing steps are controlled from one notebook). 
 
 2. generate the data set 
 
