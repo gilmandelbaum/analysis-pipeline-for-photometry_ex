@@ -13,4 +13,4 @@ output: same as notebook 2 but with neural data processed.
 
 3_e: df/f using a Sliding window of 10 seconds and 10 percentile to calculate baseline.  Z score on full session. Take the derivative of that. not yet working. 
 
-3_f: df/f using a Sliding window of 10 seconds and 10 percentile to calculate baseline.  deconvovle signal. For more info: #https://caiman.readthedocs.io/en/master/core_functions.html 
+3_f: df/f using a Sliding window of 10 seconds and 10 percentile to calculate baseline.  deconvovle signal. For more info: https://caiman.readthedocs.io/en/master/core_functions.html 
