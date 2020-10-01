@@ -17,5 +17,5 @@ output: same as notebook 2 but with neural data processed.
 
 3_g: df/f using a Sliding window of 10 seconds and 1 percentile to calculate baseline.
 
-3_h: df/f using a Sliding window of 10 seconds and 1 percentile to calculate baseline. Z score on full session. 
+3_h: df/f using a Sliding window of 10 seconds and 1 percentile to calculate baseline. Smoothing using 1 sec sliding window with avg. 
 
