@@ -22,3 +22,8 @@ output: same as notebook 2 but with neural data processed.
 3_i: df/f using a Sliding window of 10 seconds and 1 percentile to calculate baseline. Smoothing using 150ms sliding window with avg. 
 
 3_j: df/f using a Sliding window of 10 seconds and 0.5 percentile to calculate baseline. Smoothing using 1 sec sliding window with avg for d1 and 250ms for d2. Z score on that and add the value 2. 
+
+3_k: df/f using a Sliding window of 10 seconds and 0.5 percentile to calculate baseline. Smoothing using 1 sec sliding window with avg for d1 and 250ms for d2. Z score. 
+
+3_l: df/f using a Sliding window of 10 seconds and 0.5 percentile to calculate baseline. normalize betweeen 0 and 1 the full trace. 
+
