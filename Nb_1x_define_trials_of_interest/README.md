@@ -9,3 +9,7 @@ output: a list of lists called mouse_dateNotebook_1_label.pickle
 1_b: get no ENLp, no CUEp trials. 
 
 1_c: get ENLp. 
+
+1_d: must be combined with 1_a or 1_b or 1_c. Gives the combination of one of the three and optogenetetics stimulation trials.
+
+1_e: must be combined with 1_a or 1_b or 1_c. Gives the combination of one of the three and NOT the optogenetetics stimulation trials in a optogenetics stimulation experiment.
