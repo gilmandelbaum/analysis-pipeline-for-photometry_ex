@@ -116,5 +116,6 @@ def run_dataset(Mouse_Date_FileName,nb_list,nb_path,seq_str,dict_for_pm):
                 print (date_and_name+"_"+photometry_data_file_name)
                 print('Notebook_'+notebook_number+'_'+notebook_version+'.ipynb is being executed')
                 
-                pm.execute_notebook(nb_path+folder_name+"/"+'Notebook_'+str(notebook_number)+'_'+notebook_version+'.ipynb', 'TestOutPut.ipynb',kernel_name = "photometry_env", parameters= dict_for_pm,nest_asyncio=True)
+                #pm.execute_notebook(nb_path+folder_name+"/"+'Notebook_'+str(notebook_number)+'_'+notebook_version+'.ipynb', 'TestOutPut.ipynb',kernel_name = "photometry_env", parameters= dict_for_pm,nest_asyncio=True)
+                pm.execute_notebook(nb_path+folder_name+"/"+'Notebook_'+str(notebook_number)+'_'+notebook_version+'.ipynb', 'TestOutPut.ipynb',kernel_name = "python3", parameters= dict_for_pm,nest_asyncio=True)
     return 

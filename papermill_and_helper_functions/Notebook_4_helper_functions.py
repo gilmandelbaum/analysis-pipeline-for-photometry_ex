@@ -2,7 +2,7 @@
 import pandas as pd 
 
 
-#fuction that adds a flag for notebook 4_a: 
+#function that adds a flag for notebook 4_a: 
 
 def tag_period(beh_photo_align, period_name, states_list):
     

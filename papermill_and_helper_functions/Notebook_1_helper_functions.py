@@ -93,3 +93,28 @@ def divide_withWithout_ENLp_noCuep(df_trial, ENLp):
 
 
 
+
+    
+"""
+For notebook 1_d and for 1_e:
+A function that takes the intersection of two trial number lists 
+"""
+
+def get_nTrials_ttCombine(behavior_data_trial_RIC_LIC_combinations_n, behavior_data_trial_stim_RIC_LIC_combinations_n):
+    total= []
+    for rl_i in range(0, len(behavior_data_trial_RIC_LIC_combinations_n)):
+        rl = behavior_data_trial_RIC_LIC_combinations_n[rl_i]
+        rl_stim = behavior_data_trial_stim_RIC_LIC_combinations_n[rl_i]
+        rl_l=[]
+        for ic_i in range(0, len(rl)):
+            ic = rl[ic_i]
+            ic_stim= rl_stim[ic_i]
+            ic_l=[]
+            for combo_i in range(0, len(ic)):
+                combo = ic[combo_i]
+                combo_stim = ic_stim[combo_i]
+                ic_l.append(list(set(combo) & set(combo_stim)))
+            rl_l.append(ic_l)
+            
+        total.append(rl_l)
+    return total
